@@ -1,5 +1,5 @@
 [workspace]
-members = ["packages/tools"]
+members = ["exercises/02_hello_cargo","packages/tools"]
 default-members = ["packages/tools"]
 resolver = "2"
 exclude = [
