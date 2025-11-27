@@ -2,7 +2,10 @@
   "name": "Rust CLI Study",
   "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
   "features": {
-    "ghcr.io/devcontainers/features/rust:1": {}
+    "ghcr.io/devcontainers/features/rust:1": {
+      "version": "1.90",
+      "profile": "default"
+    }
   },
   "customizations": {
     "vscode": {
@@ -15,5 +18,5 @@
       }
     }
   },
-  "postCreateCommand": "rustc --version && cargo --version"
+  "postCreateCommand": "bash .devcontainer/post-create.sh"
 }
