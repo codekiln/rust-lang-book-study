@@ -52,6 +52,18 @@ fn test_mutation() {
     println!("After mutation x: {x}");
 }
 
+fn test_float_conversion() {
+    let x = 2.0;
+    println!("Float x: {x}");
+}
+
+fn test_tuple_access() {
+    let tup = (1, 2.0, 'a');
+    let (a, b, c) = tup;
+    println!("Tuple elements: {a}, {b}, {c}");
+    // Tuple elements: 1, 2, a
+}
+
 fn main() {
     println!("Testing const vs let:");
     test_const_vs_let();
@@ -65,4 +77,8 @@ fn main() {
     test_postfix_increment();
     println!("Testing mutation:");
     test_mutation();
+    println!("Testing float conversion:");
+    test_float_conversion();
+    println!("Testing tuple access:");
+    test_tuple_access();
 }
