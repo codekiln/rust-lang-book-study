@@ -58,11 +58,41 @@ fn test_float_conversion() {
 }
 
 fn test_tuple_access() {
-    let tup = (1, 2.0, 'a');
-    let (a, b, c) = tup;
+    let my_tuple = (1, 2.0, 'a');
+    let (a, b, c) = my_tuple;
     println!("Tuple elements: {a}, {b}, {c}");
     // Tuple elements: 1, 2, a
+
+    let two_point_zero = my_tuple.1;
+    println!("Accessed second element: {two_point_zero}");
+    // Accessed second element: 2
 }
+
+fn test_tuple_mutation() {
+    let mut x: (i32, i32) = (1, 2);
+    println!("Original tuple: ({}, {})", x.0, x.1);
+    x.0 = 0;
+    x.1 += 5;
+    println!("Mutated tuple: ({}, {})", x.0, x.1);
+}
+
+fn test_arrays() {
+    let a = [1, 2, 3, 4, 5];
+  
+  	let months = ["January", "February", "March", "April", "May", "June", "July",
+              "August", "September", "October", "November", "December"];
+
+    println!("Second month: {}", months[1]);
+    println!("Array a: {:?}", a);
+
+}
+
+fn test_arrays_complex() {
+    let t = ([1; 2], [3; 4]);
+    let (a, b) = t;
+    println!("{}", a[0] + t.1[0]);
+}
+
 
 fn main() {
     println!("Testing const vs let:");
@@ -81,4 +111,10 @@ fn main() {
     test_float_conversion();
     println!("Testing tuple access:");
     test_tuple_access();
+    println!("Testing tuple mutation:");
+    test_tuple_mutation();
+    println!("Testing arrays:");
+    test_arrays();
+    println!("Testing complex arrays:");
+    test_arrays_complex();
 }
