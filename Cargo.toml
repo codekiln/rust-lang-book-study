@@ -1,7 +1,10 @@
 [workspace]
 members = [
     "exercises/02_hello_cargo", 
-    "exercises/03_guessing_game", "exercises/04_variables", "exercises/05_functions",
+    "exercises/03_guessing_game", 
+    "exercises/04_variables", 
+    "exercises/05_functions", 
+    "exercises/ch03-common-programming-concepts/05_control_flow", 
     "packages/tools"
 ]
 default-members = ["packages/tools"]
